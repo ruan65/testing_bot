@@ -1,0 +1,25 @@
+{
+  "name": "testing_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruan65/testing_bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruan65/testing_bot/issues"
+  },
+  "homepage": "https://github.com/ruan65/testing_bot#readme",
+  "dependencies": {
+    "appium-flutter-finder": "^0.1.0",
+    "assert": "^2.0.0",
+    "webdriverio": "^7.20.3"
+  }
+}
