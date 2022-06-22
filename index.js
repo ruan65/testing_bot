@@ -38,8 +38,10 @@ const opts = {
   await driver.elementClick(onboardingNextButtonFinder);
   await driver.elementClick(onboardingNextButtonFinder);
 
-	const skipQuestionnaireFinder = byValueKey('skipQuestionnaireKey');
+	const goalChoiceFinder = byValueKey('questionnaireGoalButtonKey1');
+	await driver.elementClick(goalChoiceFinder);
 
+	const skipQuestionnaireFinder = byValueKey('skipQuestionnaireKey');
 	await driver.elementClick(skipQuestionnaireFinder);
 
 //   assert.strictEqual(await driver.getElementText(counterTextFinder), '2');
