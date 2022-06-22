@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ruan65/testing_bot#readme",
   "dependencies": {
+    "appium-flutter-driver": "^1.2.0",
     "appium-flutter-finder": "^0.1.0",
     "assert": "^2.0.0",
     "webdriverio": "^7.20.3"

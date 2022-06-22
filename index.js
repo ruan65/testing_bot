@@ -2,6 +2,8 @@ const wdio = require('webdriverio');
 const assert = require('assert');
 const { byValueKey } = require('appium-flutter-finder');
 
+const {user_k, key_k} = require("./config")
+
 const caps = {
   platformName: 'Android',
   deviceName: 'Pixel 6',
@@ -17,8 +19,8 @@ const opts = {
     retryBackoffTime: 500,
     hostname: 'hub.testingbot.com'
   },
-  user: '108b15de03d86b941c9a62d3933a86d4',
-  key: '8ec4c1088850337fb20631ea12a47ec5'
+  user: user_k,
+  key: key_k
 };
 
 (async () => {
@@ -33,6 +35,12 @@ const opts = {
     action: 'tap',
     element: { elementId: onboardingNextButtonFinder }
   });
+  await driver.elementClick(onboardingNextButtonFinder);
+  await driver.elementClick(onboardingNextButtonFinder);
+
+	const skipQuestionnaireFinder = byValueKey('skipQuestionnaireKey');
+
+	await driver.elementClick(skipQuestionnaireFinder);
 
 //   assert.strictEqual(await driver.getElementText(counterTextFinder), '2');
 
