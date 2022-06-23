@@ -19,8 +19,10 @@ const opts = {
     retryBackoffTime: 500,
     hostname: 'hub.testingbot.com'
   },
-  user: user_k,
-  key: key_k
+//   user: user_k,
+//   key: key_k
+	user:'108b15de03d86b941c9a62d3933a86d4',
+	key: '8ec4c1088850337fb20631ea12a47ec5'
 };
 
 (async () => {
@@ -38,11 +40,11 @@ const opts = {
   await driver.elementClick(onboardingNextButtonFinder);
   await driver.elementClick(onboardingNextButtonFinder);
 
-	const goalChoiceFinder = byValueKey('questionnaireGoalButtonKey1');
-	await driver.elementClick(goalChoiceFinder);
+// 	const goalChoiceFinder = byValueKey('questionnaireGoalButtonKey1');
+// 	await driver.elementClick(goalChoiceFinder);
 
-	const skipQuestionnaireFinder = byValueKey('skipQuestionnaireKey');
-	await driver.elementClick(skipQuestionnaireFinder);
+// 	const skipQuestionnaireFinder = byValueKey('skipQuestionnaireKey');
+// 	await driver.elementClick(skipQuestionnaireFinder);
 
 //   assert.strictEqual(await driver.getElementText(counterTextFinder), '2');
 
