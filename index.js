@@ -30,8 +30,6 @@ const opts = {
 
   const driver = await wdio.remote(opts);
 
-//   assert.strictEqual(await driver.getElementText(counterTextFinder), '0');
-
   await driver.elementClick(onboardingNextButtonFinder);
   await driver.touchAction({
     action: 'tap',
@@ -40,13 +38,14 @@ const opts = {
   await driver.elementClick(onboardingNextButtonFinder);
   await driver.elementClick(onboardingNextButtonFinder);
 
-// 	const goalChoiceFinder = byValueKey('questionnaireGoalButtonKey1');
-// 	await driver.elementClick(goalChoiceFinder);
+	const goalChoiceFinder = byValueKey('questionnaireGoalButtonKey0');
+	await driver.touchAction({
+		action: 'tap',
+		element: { elementId: goalChoiceFinder }
+	});
 
-// 	const skipQuestionnaireFinder = byValueKey('skipQuestionnaireKey');
-// 	await driver.elementClick(skipQuestionnaireFinder);
-
-//   assert.strictEqual(await driver.getElementText(counterTextFinder), '2');
+	const skipQuestionnaireFinder = byValueKey('skipQuestionnaireKey');
+	await driver.elementClick(skipQuestionnaireFinder);
 
   driver.deleteSession();
 })();
